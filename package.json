@@ -1,0 +1,50 @@
+{
+  "name": "@paojiao134/pi-niubash",
+  "version": "0.1.0",
+  "description": "Route Pi shell tools through Niubash and disable PowerShell tools",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "niubash",
+    "shell"
+  ],
+  "files": [
+    "src/index.ts",
+    "src/niubash.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YMRwithNoworry/pi-niubash.git"
+  },
+  "homepage": "https://github.com/YMRwithNoworry/pi-niubash#readme",
+  "bugs": {
+    "url": "https://github.com/YMRwithNoworry/pi-niubash/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.2.0",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  }
+}
